@@ -1,0 +1,153 @@
+.root {
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Игровое поле */
+
+.game {
+    margin: 30px auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.game__content {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game__title {
+    margin: 0;
+    color: #565151;
+    font-size: 34px;
+    margin-bottom: 14px;
+}
+
+.game__stats {
+    max-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.game__stats-box {
+    border-radius: 15px;
+    background: #565151;
+    padding: 15px;
+}
+
+.game__stats-box:first-child {
+    margin-right: 5px;
+}
+
+.game__stats-title {
+    color: #928989;
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+.game__stat-moves, .game__stat-time{
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+}
+
+.game__field {
+    height: 600px;
+    padding: 10px;
+    margin: -5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #565151;
+}
+
+.game__square {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    /* width: 135px;
+    height: 135px; */
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    background: #928989;
+    font-size: 50px;
+    border-radius: 10px;
+    color: #3a3636;
+}
+
+.game__square-space {
+    cursor: auto;
+}
+
+.game__button-shuffle {
+    padding: 5px 10px;
+    margin: 0 0 14px;
+    color: #565151;
+    font-size: 16px;
+    border-radius: 15px;
+    outline: none;
+}
+
+/* Попап */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.2);
+}
+
+.popup__victory  {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup__title {
+    background: #fff;
+    border-radius: 15px;
+    margin: 0;
+    padding: 10px 15px;
+    color: #414040;
+    font-size: 34px;
+}
+
+.popup_is-opened {
+    display: flex;
+}
+
+@media screen and (max-width: 625px) {
+    
+    .game {
+        max-width: 400px;
+    }
+    .game__field {
+        height: 400px;
+    }
+    
+    .game__content {
+        flex-direction: column;
+    }
+
+    .game__button-shuffle {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 325px) {
+
+    .game__field {
+        height: 320px;
+    }
+}
